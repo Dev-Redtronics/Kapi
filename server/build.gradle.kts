@@ -1,21 +1,12 @@
 plugins {
-    kotlin("jvm")
-}
-
-group = "dev.redtronics.kapi"
-version = "1.0-SNAPSHOT"
-
-repositories {
-    mavenCentral()
+    `kapi-core`
+    `kapi-docs`
 }
 
 dependencies {
-    testImplementation(kotlin("test"))
-}
+    // Ktor
+    api(libs.bundles.ktor.server)
 
-tasks.test {
-    useJUnitPlatform()
-}
-kotlin {
-    jvmToolchain(21)
+    // Testing
+    testImplementation(libs.bundles.testing)
 }
