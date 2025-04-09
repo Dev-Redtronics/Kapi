@@ -3,3 +3,4 @@ plugins {
 }
 rootProject.name = "Kapi"
 include("server")
+include("client")
