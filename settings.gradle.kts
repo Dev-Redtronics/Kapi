@@ -1,6 +1,9 @@
 plugins {
-    id("org.gradle.toolchains.foojay-resolver-convention") version "0.8.0"
+    id("org.gradle.toolchains.foojay-resolver-convention") version "0.9.0"
 }
 rootProject.name = "Kapi"
-include("server")
-include("client")
+
+include(":server")
+include(":client")
+include(":example")
+include(":common")
