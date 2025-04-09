@@ -1,5 +1,5 @@
 package dev.redtronics.kapi
 
-fun main() {
+public fun main() {
     println("Hello World!")
 }
