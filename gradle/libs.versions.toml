@@ -1,12 +1,15 @@
 [versions]
 kotlin = "2.1.20"
+dokka = "2.0.0"
 
 [libraries]
 kotlin-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 serialization-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-serialization", version.ref = "kotlin" }
+dokka-gradle-plugin = { module = "org.jetbrains.dokka:org.jetbrains.dokka.gradle.plugin", version.ref = "dokka" }
 
 [bundles]
 build-src = [
     "kotlin-gradle-plugin",
-    "serialization-gradle-plugin"
+    "serialization-gradle-plugin",
+    "dokka-gradle-plugin"
 ]
