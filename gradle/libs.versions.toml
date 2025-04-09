@@ -3,8 +3,10 @@ kotlin = "2.1.20"
 
 [libraries]
 kotlin-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+serialization-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-serialization", version.ref = "kotlin" }
 
 [bundles]
 build-src = [
-    "kotlin-gradle-plugin"
+    "kotlin-gradle-plugin",
+    "serialization-gradle-plugin"
 ]
