@@ -1,0 +1,10 @@
+version: 2
+updates:
+  - package-ecosystem: "gradle"
+    directory: "/"
+    schedule:
+      interval: "day"
+  - package-ecosystem: "docker"
+    directory: "/"
+    schedule:
+      interval: "day"
