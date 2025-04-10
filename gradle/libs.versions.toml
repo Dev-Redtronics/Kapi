@@ -3,6 +3,7 @@ kotlin = "2.1.20"
 dokka = "2.0.0"
 ktor = "3.1.2"
 kotest = "6.0.0.M3"
+ksp = "2.1.20-2.0.0"
 
 [libraries]
 # Ktor Server
@@ -19,16 +20,22 @@ kotest-assertions-core = { module = "io.kotest:kotest-assertions-core", version.
 kotest-property = { module = "io.kotest:kotest-property", version.ref = "kotest" }
 kotest-runner-junit5 = { module = "io.kotest:kotest-runner-junit5", version.ref = "kotest" }
 
+# Ksp
+ksp = { module = "com.google.devtools.ksp:symbol-processing-api", version.ref = "ksp" }
+
 # actual plugins, but needed as dependencies in buildSrc
 kotlin-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 serialization-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-serialization", version.ref = "kotlin" }
 dokka-gradle-plugin = { module = "org.jetbrains.dokka:org.jetbrains.dokka.gradle.plugin", version.ref = "dokka" }
+ksp-gradle-plugin = { module = "com.google.devtools.ksp:com.google.devtools.ksp.gradle.plugin", version.ref = "ksp" }
+
 
 [bundles]
 build-src = [
     "kotlin-gradle-plugin",
     "serialization-gradle-plugin",
-    "dokka-gradle-plugin"
+    "dokka-gradle-plugin",
+    "ksp-gradle-plugin"
 ]
 
 testing = [
