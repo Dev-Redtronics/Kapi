@@ -14,7 +14,7 @@ repositories {
     mavenCentral()
 }
 
-public val targetJavaVersion: JavaVersion = JavaVersion.VERSION_1_8
+public val targetJavaVersion: JavaVersion = JavaVersion.VERSION_17
 java {
     targetCompatibility = targetJavaVersion
     sourceCompatibility = targetJavaVersion
