@@ -2,7 +2,7 @@ package dev.redtronics.kapi
 
 @OpenApi(
     spec = "openapi.yaml",
-    apiTarget = ApiTarget.CLIENT,
-
+    type = ApiType.SERVER,
+    target = ApiTarget.STANDALONE
 )
 public class API
