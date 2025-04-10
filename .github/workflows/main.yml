@@ -14,3 +14,12 @@ jobs:
 
   test:
     uses: ./.github/workflows/test.yml
+    needs:
+      - build
+
+  pages:
+    uses: ./.github/workflows/dokka.yml
+    needs:
+      - build
+      - test
+    if: github.ref == 'refs/heads/main'
