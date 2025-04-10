@@ -1,8 +1,9 @@
 plugins {
     `kapi-core`
+    com.google.devtools.ksp
 }
 
 dependencies {
-    implementation(project(":client"))
-    implementation(project(":server"))
+    implementation(project(":annotations"))
+    ksp(project(":processor"))
 }
