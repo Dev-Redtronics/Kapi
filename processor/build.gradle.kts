@@ -7,4 +7,5 @@ plugins {
 dependencies {
     implementation(project(":annotations"))
     implementation(libs.ksp)
+    implementation(libs.reflect)
 }
