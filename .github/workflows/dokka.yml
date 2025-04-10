@@ -3,9 +3,6 @@ name: Dokka
 on:
   workflow_call:
 
-permissions:
-  contents: write
-
 jobs:
   dokka:
     runs-on: ubuntu-latest
@@ -34,3 +31,4 @@ jobs:
           git-config-name: GitHub Actions
           git-config-email: actions@github.com
           commit-message: Update docs
+          token: '${{ secrets.GITHUB_TOKEN }}'
