@@ -1,0 +1,49 @@
+[versions]
+kotlin = "2.1.20"
+dokka = "2.0.0"
+ktor = "3.1.2"
+kotest = "6.0.0.M3"
+
+[libraries]
+# Ktor Server
+ktor-server-core = { module = "io.ktor:ktor-server-core", version.ref = "ktor" }
+ktor-server-cio = { module = "io.ktor:ktor-server-cio", version.ref = "ktor" }
+
+# Ktor Client
+ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
+ktor-client-cio = { module = "io.ktor:ktor-client-cio", version.ref = "ktor" }
+
+# Testing
+kotest-framework-engine = { module = "io.kotest:kotest-framework-engine", version.ref = "kotest" }
+kotest-assertions-core = { module = "io.kotest:kotest-assertions-core", version.ref = "kotest" }
+kotest-property = { module = "io.kotest:kotest-property", version.ref = "kotest" }
+kotest-runner-junit5 = { module = "io.kotest:kotest-runner-junit5", version.ref = "kotest" }
+
+# actual plugins, but needed as dependencies in buildSrc
+kotlin-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+serialization-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-serialization", version.ref = "kotlin" }
+dokka-gradle-plugin = { module = "org.jetbrains.dokka:org.jetbrains.dokka.gradle.plugin", version.ref = "dokka" }
+
+[bundles]
+build-src = [
+    "kotlin-gradle-plugin",
+    "serialization-gradle-plugin",
+    "dokka-gradle-plugin"
+]
+
+testing = [
+    "kotest-framework-engine",
+    "kotest-assertions-core",
+    "kotest-property",
+    "kotest-runner-junit5"
+]
+
+ktor-server = [
+    "ktor-server-core",
+    "ktor-server-cio"
+]
+
+ktor-client = [
+    "ktor-client-core",
+    "ktor-client-cio"
+]

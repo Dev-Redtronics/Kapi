@@ -1,21 +1,19 @@
 plugins {
-    kotlin("jvm") version "2.1.20"
+    `kapi-docs`
 }
-
-group = "dev.redtronics.kapi"
-version = "1.0-SNAPSHOT"
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    testImplementation(kotlin("test"))
+    dokka(project(":client"))
+    dokka(project(":server"))
+    dokka(project(":common"))
 }
 
-tasks.test {
-    useJUnitPlatform()
-}
-kotlin {
-    jvmToolchain(21)
+dokka {
+    dokkaPublications.html {
+        outputDirectory = project.projectDir.resolve("docs/html")
+    }
 }
