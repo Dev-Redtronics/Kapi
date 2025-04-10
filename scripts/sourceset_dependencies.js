@@ -1,0 +1,1 @@
+sourceset_dependencies = '{":server/main":[],":client/main":[],":common/main":[]}'

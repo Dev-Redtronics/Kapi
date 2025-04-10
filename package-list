@@ -1,0 +1,9 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+
+module:Client
+dev.redtronics.kapi.client
+module:Common
+dev.redtronics.kapi
+module:Server
+dev.redtronics.kapi.server
