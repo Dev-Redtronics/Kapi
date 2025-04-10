@@ -3,9 +3,6 @@ plugins {
 }
 rootProject.name = "Kapi"
 
-include(":server")
-include(":client")
 include(":example")
-include(":common")
-include(":ksp-annotations")
-include(":ksp-processors")
+include(":processor")
+include(":annotations")

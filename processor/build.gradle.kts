@@ -5,6 +5,6 @@ plugins {
 }
 
 dependencies {
-    // Testing
-    testImplementation(libs.bundles.testing)
+    api(project(":annotations"))
+    implementation(libs.ksp)
 }
