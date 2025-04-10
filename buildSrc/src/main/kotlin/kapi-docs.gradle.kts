@@ -1,4 +1,3 @@
-import dev.redtronics.buildSrc.Project
 import java.time.Year
 
 plugins {
@@ -14,6 +13,6 @@ dokka {
     }
 
     pluginsConfiguration.html {
-        footerMessage.set("Copyright © ${Project.INCEPTION_YEAR}-${Year.now()} Nils Jaekel")
+        footerMessage.set("Copyright © ${Year.now()} Nils Jaekel")
     }
 }
