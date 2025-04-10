@@ -1,4 +1,4 @@
-name: Main Workflow
+name: main
 
 on:
   push:
@@ -12,17 +12,17 @@ permissions:
   contents: write
 
 jobs:
-#  build:
-#    uses: ./.github/workflows/build.yml
-#
-#  test:
-#    uses: ./.github/workflows/test.yml
-#    needs:
-#      - build
+  build:
+    uses: ./.github/workflows/build.yml
+
+  test:
+    uses: ./.github/workflows/test.yml
+    needs:
+      - build
 
   pages:
     uses: ./.github/workflows/dokka.yml
-#    needs:
-#      - build
-#      - test
+    needs:
+      - build
+      - test
     if: github.ref == 'refs/heads/main'

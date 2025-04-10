@@ -1,4 +1,4 @@
-name: Gradle Test
+name: gradle test
 
 on:
   workflow_call:
