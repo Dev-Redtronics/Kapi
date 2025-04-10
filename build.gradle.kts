@@ -11,3 +11,9 @@ dependencies {
     dokka(project(":server"))
     dokka(project(":common"))
 }
+
+dokka {
+    dokkaPublications.html {
+        outputDirectory = project.projectDir.resolve("docs/html")
+    }
+}
