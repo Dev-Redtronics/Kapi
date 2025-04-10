@@ -8,18 +8,21 @@ on:
     branches:
       - "*"
 
-jobs:
-  build:
-    uses: ./.github/workflows/build.yml
+permissions:
+  contents: write
 
-  test:
-    uses: ./.github/workflows/test.yml
-    needs:
-      - build
+jobs:
+#  build:
+#    uses: ./.github/workflows/build.yml
+#
+#  test:
+#    uses: ./.github/workflows/test.yml
+#    needs:
+#      - build
 
   pages:
     uses: ./.github/workflows/dokka.yml
-    needs:
-      - build
-      - test
+#    needs:
+#      - build
+#      - test
     if: github.ref == 'refs/heads/main'

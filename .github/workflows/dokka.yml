@@ -31,4 +31,3 @@ jobs:
           git-config-name: GitHub Actions
           git-config-email: actions@github.com
           commit-message: Update docs
-          token: '${{ secrets.GITHUB_TOKEN }}'
