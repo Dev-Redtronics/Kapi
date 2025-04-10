@@ -5,6 +5,6 @@ plugins {
 }
 
 dependencies {
-    api(project(":annotations"))
+    implementation(project(":annotations"))
     implementation(libs.ksp)
 }
