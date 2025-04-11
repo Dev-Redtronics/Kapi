@@ -37,7 +37,7 @@ private class OpenApiProcessor(
 
     private fun processGeneration(symbol: KSClassDeclaration) {
         val openApi = getOpenApiConfiguration(symbol)
-        logger.error(openApi.spec)
+        logger.info(openApi.spec)
     }
 
     private fun getOpenApiConfiguration(symbol: KSClassDeclaration): OpenApi {
@@ -45,11 +45,3 @@ private class OpenApiProcessor(
     }
 }
 
-private fun <T> Sequence<T>.isEmpty(): Boolean {
-    try {
-        this.count()
-        return false
-    } catch (_: NoSuchElementException) {
-        return true
-    }
-}
