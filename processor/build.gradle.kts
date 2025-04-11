@@ -6,6 +6,7 @@ plugins {
 
 dependencies {
     implementation(project(":annotations"))
-    implementation(libs.ksp)
-    implementation(libs.reflect)
+    implementation(libs.bundles.generation)
+
+    testImplementation(libs.bundles.testing)
 }
